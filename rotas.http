@@ -16,9 +16,42 @@ POST http://localhost:3000/add-movie
 Content-Type: application/json
 
 {
-  "titulo": "Vingadores: Guerra Infinita",
+  "titulo": "Gente grande",
   "genero": "Ação",
   "duraçao": 149,
+  "classificaçao_etaria": "16"
+}
+
+###
+POST http://localhost:3000/add-movie
+Content-Type: application/json
+
+{
+  "titulo": "Gente grande 2",
+  "genero": "Ação",
+  "duraçao": 181,
+  "classificaçao_etaria": "16"
+}
+
+###
+POST http://localhost:3000/add-movie
+Content-Type: application/json
+
+{
+  "titulo": "Ted",
+  "genero": "Ação",
+  "duraçao": 121,
+  "classificaçao_etaria": "12"
+}
+
+###
+POST http://localhost:3000/add-movie
+Content-Type: application/json
+
+{
+  "titulo": "Ted 2",
+  "genero": "Ação",
+  "duraçao": 127,
   "classificaçao_etaria": "12"
 }
 
@@ -38,9 +71,9 @@ POST http://localhost:3000/add-movie
 Content-Type: application/json
 
 {
-  "titulo": "Homem-Aranha",
-  "genero": "Ação",
-  "duraçao": 121,
+  "titulo": "As Branquelas",
+  "genero": "Comédia",
+  "duraçao": 109,
   "classificaçao_etaria": "12"
 }
 
@@ -49,43 +82,10 @@ POST http://localhost:3000/add-movie
 Content-Type: application/json
 
 {
-  "titulo": "Homem-Aranha 2",
-  "genero": "Ação",
+  "titulo": "Jurassic Park",
+  "genero": "Aventura",
   "duraçao": 127,
-  "classificaçao_etaria": "12"
-}
-
-###
-POST http://localhost:3000/add-movie
-Content-Type: application/json
-
-{
-  "titulo": "Homem-Aranha 3",
-  "genero": "Ação",
-  "duraçao": 139,
-  "classificaçao_etaria": "12"
-}
-
-###
-POST http://localhost:3000/add-movie
-Content-Type: application/json
-
-{
-  "titulo": "Obsessão",
-  "genero": "Suspense",
-  "duraçao": 98,
-  "classificaçao_etaria": "14"
-}
-
-###
-POST http://localhost:3000/add-movie
-Content-Type: application/json
-
-{
-  "titulo": "Odisseia",
-  "genero": "Ficção Científica",
-  "duraçao": 149,
-  "classificaçao_etaria": "Livre"
+  "classificaçao_etaria": "10"
 }
 
 ###
@@ -137,9 +137,9 @@ PUT http://localhost:3000/update-movie/1
 Content-Type: application/json
 
 {
-  "titulo": "Homem-Aranha: De Volta ao Lar",
+  "titulo": "Homem de Ferro",
   "genero": "Ação",
-  "duraçao": 133,
+  "duraçao": 126,
   "classificaçao_etaria": "12"
 }
 

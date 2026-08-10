@@ -14,7 +14,7 @@ const app = express()
 app.use(express.json())
 
 app.get("/all-movies", (request, response) => {
-    const selectCommand = "SELECT * FROM filmes_Nathan_MariaClara"
+    const selectCommand = "SELECT * FROM filmes_EduardoCabral_Phelipe"
 
     database.query(selectCommand, (error, data) => {
         if (error) {
@@ -28,12 +28,12 @@ app.get("/all-movies", (request, response) => {
 
 
 app.post("/add-movie", (request, response) => {
-    const { titulo, genero, duraçao, classificaçao_etaria } = request.body
+    const { titulo, genero, duracao, classificacao_etaria } = request.body
 
     const insertCommand = 
-        "INSERT INTO filmes_Nathan_MariaClara(titulo, genero, duraçao, classificaçao_etaria) VALUES (?, ?, ?, ?)"
+        "INSERT INTO filmes_EduardoCabral_Phelipe(titulo, genero, duracao, classificacao_etaria) VALUES (?, ?, ?, ?)"
 
-    database.query(insertCommand, [titulo, genero, duraçao, classificaçao_etaria], (error) => {
+    database.query(insertCommand, [titulo, genero, duracao, classificacao_etaria], (error) => {
         if (error) {
             console.log(error)
         } else {
@@ -48,7 +48,7 @@ app.delete("/delete-movie/:id", (request, response) => {
 
     const { id } = request.params
 
-    const deleteCommand = "DELETE FROM filmes_Nathan_MariaClara WHERE id=?"
+    const deleteCommand = "DELETE FROM filmes_EduardoCabral_Phelipe WHERE id=?"
 
     database.query(deleteCommand, [id], (error) => {
         if (error) {
@@ -64,12 +64,12 @@ app.delete("/delete-movie/:id", (request, response) => {
 
 app.put("/update-movie/:id", (request, response) => {
     const { id } = request.params
-    const { titulo, genero, duraçao, classificaçao_etaria } = request.body
+    const { titulo, genero, duracao, classificacao_etaria } = request.body
 
     const updateCommand = 
-        "UPDATE filmes_Nathan_MariaClara SET titulo = ?, genero = ?, duraçao = ?, classificaçao_etaria = ? WHERE id = ?"
+        "UPDATE filmes_EduardoCabral_Phelipe SET titulo = ?, genero = ?, duracao = ?, classificacao_etaria = ? WHERE id = ?"
 
-    database.query(updateCommand, [titulo, genero, duraçao, classificaçao_etaria, id], (error) => {
+    database.query(updateCommand, [titulo, genero, duracao, classificacao_etaria, id], (error) => {
         if (error) {
             console.log(error)
         } else {

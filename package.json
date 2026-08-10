@@ -2,10 +2,11 @@
   "name": "primeira---bimestre-3",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
     "dev": "node --watch script.js"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
