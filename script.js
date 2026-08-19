@@ -1,5 +1,6 @@
 import express from "express"
 import mysql2 from "mysql2"
+import cors from "cors"
 
 const database = mysql2.createPool({
     host: "benserverplex.ddns.net",
@@ -10,6 +11,8 @@ const database = mysql2.createPool({
 
 
 const app = express()
+
+app.use(cors())
 
 app.use(express.json())
 
